@@ -1,0 +1,181 @@
+
+Exercicio 01
+
+using static System.Console;
+
+inicio:
+Clear();
+
+int[] array = new int [] { 1, 2, 3, 4, 5, 6 };
+foreach (int item in array)
+{
+
+	Console.WriteLine(item);
+}
+ReadKey();
+goto inicio;
+
+
+Exercicio 02 - Array
+
+using static System.Console;
+
+Clear();
+
+string[] carros = { "Volvo", "Peugeot", "Nissan" };
+
+Console.WriteLine(carros[0]);
+
+ReadKey();
+
+
+Exercicio 03 - Array
+
+using static System.Console;
+
+Clear();
+
+string[] carros = { "Volvo", "Peugeot", "Nissan" };
+carros[0] = "Byd";
+foreach (string carro in carros)
+{
+	Console.WriteLine(carro);
+}
+ReadKey();
+
+Exercicio 04 - Array - Ordenacao
+
+using static System.Console;
+
+Clear();
+
+string[] carros = { "Volvo", "Peugeot", "Nissan", "Fiat", "Ford" };
+carros[0] = "Byd";
+Array.Sort(carros);
+foreach (string carro in carros)
+{
+	Console.WriteLine(carro);
+}
+ReadKey();
+
+Exercicio 04 - Array - Inserção
+
+
+using static System.Console;
+
+Clear();
+
+string[] nomes = { "Pedro", "Maria", "Tiago", "Beatriz"};
+
+WriteLine();
+WriteLine("O tamanho do array é: " + nomes.Length);
+WriteLine();
+Array.Sort(nomes);
+WriteLine("Os nomes sao: ");
+foreach (string n in nomes)
+{
+	WriteLine(n);
+}
+WriteLine();
+
+string novonome = "Kassandra";
+List<string> adnome = new List<string>(nomes.ToList());
+
+adnome.Add(novonome);
+
+nomes = adnome.ToArray();
+
+WriteLine("O tamanho do array é: " + nomes.Length);
+WriteLine();
+Array.Sort(nomes);
+WriteLine("Os nomes sao: ");
+foreach (string nome in nomes)
+{
+
+	WriteLine(nome);
+}
+
+ReadKey();
+
+Problema 01 - Array
+
+using static System.Console;
+
+Clear();
+
+int i;
+int [] numeros = new int[5];
+
+for (i = 0; i < 5; i++)
+{
+	WriteLine("Informe 5 numeros: " + i);
+	numeros[i] = Convert.ToInt32(Console.ReadLine());
+	
+}
+Clear();
+WriteLine("os numeros digitados sao: ");
+for (int n=0; n < numeros.Length; n++)
+{
+	WriteLine(numeros[n]);
+}
+
+
+ReadKey();
+
+Problema 02 - Escreva 10 numeros e registre numeros, pares e impares
+
+
+using static System.Console;
+
+Clear();
+
+int i;
+int [] numeros = new int[10];
+int[] pares = new int[10];
+int[] impares = new int[10];
+
+for (i = 0; i < 10; i++)
+{
+	WriteLine("Informe 10 numeros: " + i);
+	numeros[i] = Convert.ToInt32(Console.ReadLine());
+	if (numeros[i] % 2 == 0 && numeros[i] != 0)
+	{
+		pares[i] = numeros[i];
+	}
+	else
+	{
+		impares[i] = numeros[i];
+	}
+
+
+}
+Array.Sort(numeros);
+Array.Sort(pares);
+Array.Sort(impares);
+Clear();
+WriteLine("os numeros digitados sao: ");
+WriteLine("**************************");
+for (int n=0; n < numeros.Length; n++)
+{
+	WriteLine(numeros[n]);
+}
+
+
+WriteLine("os numeros impares digitados sao: ");
+WriteLine("**********************************");
+foreach (int n in impares)
+{
+	if (n != 0)
+	WriteLine(n);
+}
+
+
+WriteLine("os numeros pares digitados sao: ");
+WriteLine("********************************");
+foreach (int n in pares)
+{
+	if (n != 0)
+	WriteLine(n);
+}
+ReadKey();
+
